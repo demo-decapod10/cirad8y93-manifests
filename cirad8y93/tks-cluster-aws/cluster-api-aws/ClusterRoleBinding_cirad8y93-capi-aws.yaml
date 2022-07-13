@@ -1,0 +1,13 @@
+# Source: cluster-api-aws/templates/rbac.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cirad8y93-capi-aws
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cirad8y93-capi-aws
+subjects:
+- kind: ServiceAccount
+  name: cirad8y93-capi-aws
+  namespace: cirad8y93
